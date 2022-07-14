@@ -6,22 +6,67 @@
     <title>선린 매점 토스로 결제하기</title>
 </head>
 <body>
-    <h3>선린 매점 토스로 결제하기</h3>
-    <p>토스로 이동 중이에요😆</p>
-    <br/>
-    <p>송금화면이 열리지 않나요?</p>
-    <a href="supertoss://send?amount=0&bank=%ec%9a%b0%eb%a6%ac%ec%9d%80%ed%96%89&accountNo=54624446602101">직접 바로가기</a>
-    <p>다른 송금 서비스를 사용하나요?</p>
-    <button onclick="navigator.clipboard.writeText('우리은행 54624446602101').then((a)=>alert('복사가 완료되었어요!'))">계좌번호 복사하기</button>
-    <br/>
-    <br/>
-    <small>made by <a href="https://note11.dev/">김승빈<a></small>
+    <main>
+        <span class="title-text">선린 매점 토스로 결제하기</span>
+        <span class="description-text">토스로 이동 중이에요😆</span>
+        <a class="link-text" href="supertoss://send?amount=0&bank=%ec%9a%b0%eb%a6%ac%ec%9d%80%ed%96%89&accountNo=54624446602101">송금화면이 열리지 않아요</a>
+    </main>
+    <footer>
+        <span class="body-text">다른 송금 서비스를 사용하나요?</span>
+        <a class="link-text" href="javascript:;" onclick="navigator.clipboard.writeText('우리은행 54624446602101').then((a)=>alert('복사가 완료되었어요!'))">계좌번호 복사하기</a>
+        <br/>
+        <small>made by <a href="https://note11.dev/">김승빈<a></small>
+    </footer>
+
     <style>
+        html {
+            height: 100%;
+            width: 100%;
+        }
         body {
             align-content: center;
             text-align: center;
+            height: 100%;
+            width: 100%;
+            background-color: #F5F9FF;
+            font-weight: 500;
+            font-size: 1rem;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 0px;
         }
-        
+        main {
+            margin-bottom: 1rem;
+            max-height: max-content;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        footer {
+            padding: 3rem;
+            flex-grow: 0;
+        }
+
+        .title-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .description-text {
+            color: #898989;
+            display: block;
+            margin: 0.75rem;
+        }
+        .link-text {
+            color: #307BF0;
+            display: block;
+        }
+        .body-text {
+            color: black;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </body>
 </html>
